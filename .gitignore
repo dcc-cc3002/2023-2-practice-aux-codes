@@ -29,3 +29,13 @@ hs_err_pid*
 
 ## IntelliJ related
 .idea/
+
+### Metals ###
+.metals/
+.bloop/
+project/**/metals.sbt
+.scalafmt.conf
+
+### Mac
+.DS_Store
+**/.DS_Store

@@ -10,7 +10,9 @@ object Main {
     val daniel: Person = new Person("Danielito", 22)
     val bancoChile: Bank = new Bank("Banco de Chile")
     val bancoEstado: Bank = new Bank("Banco Estado")
+    val gol: Person = new Person("Nose :D", 22)
 
+    println(gol.name)
     println(joel.name)
     joel.bankSubscribe(bancoChile)
     println(joel.bank.name)
