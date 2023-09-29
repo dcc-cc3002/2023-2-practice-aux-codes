@@ -38,4 +38,4 @@ Para utilizar correctamente el repositorio a su favor, siga las siguientes instr
 3. Una vez avisado que se subió el código de la solución al repositorio, podrá descargar nuevamente con ``git pull`` dicho código para poder
    estudiarlo.
 
-4. DISFRUTE!!!!1!!
+4. DISFRUTE!!!!1!!!
