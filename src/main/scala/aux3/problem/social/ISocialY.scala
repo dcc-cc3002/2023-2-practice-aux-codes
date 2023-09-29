@@ -1,4 +1,4 @@
-package aux3.solution.social
+package aux3.problem.social
 
 import aux3.solution.user.IUser
 

@@ -5,21 +5,22 @@ class ICharacter(val name: String,
                  val manaPoints: Int,
                  val characterType: String) {
 
-  if (characterType == "Mercenary" || characterType == "Acrobat") {
-    manaPoints = 0
-  }
-
-  def warCry(): String = {
-    "For the glory!"
-  }
-
-  def regenerateHp(): Unit = {
-    healthPoints += 1
-  }
-
-  def regenerateMp(): Unit = {
-    if (characterType == "Assist" || characterType == "Magician") {
-      manaPoints += 1
-    }
-  }
+  // Commented for compilation purposes
+  // if (characterType == "Mercenary" || characterType == "Acrobat") {
+  //   manaPoints = 0
+  // }
+  //
+  // def warCry(): String = {
+  //   "For the glory!"
+  // }
+  //
+  // def regenerateHp(): Unit = {
+  //   healthPoints += 1
+  // }
+  //
+  // def regenerateMp(): Unit = {
+  //   if (characterType == "Assist" || characterType == "Magician") {
+  //     manaPoints += 1
+  //   }
+  // }
 }
