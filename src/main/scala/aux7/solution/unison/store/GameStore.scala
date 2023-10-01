@@ -6,8 +6,8 @@ import aux7.solution.unison.db.Database
 import aux7.solution.unison.game._
 
 trait GameStore {
-  var catalog: Map[String, Game]
   def buySingle(game: String, user: User): Option[SingleplayerGame]
   def buyMulti(game: String, user: User): Option[MultiplayerGame]
   def hasGame(game: String): Boolean
+  def addGame(game: Game): Unit
 }

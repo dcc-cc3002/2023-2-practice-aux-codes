@@ -24,9 +24,9 @@ class MainTest extends FunSuite {
     g1 = new HollowKnight()
     g2 = new GettingOverIt()
     g3 = new Smash()
-    store.catalog.put(g1.name, g1)
-    store.catalog.put(g2.name, g2)
-    store.catalog.put(g3.name, g3)
+    store.addGame(g1)
+    store.addGame(g2)
+    store.addGame(g3)
   }
 
   test("A user can buy a game") {
