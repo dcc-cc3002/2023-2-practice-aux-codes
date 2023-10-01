@@ -35,6 +35,7 @@ dio cuenta que algo no calzaba bien con la estructura actual.
 
 Si el jefe revisa este trabajo, probablemente lo despida.
 
+
 ### Indicaciones
 1. Encuentre el error en la estructura
 2. Corrija el error
