@@ -1,0 +1,4 @@
+package bags
+
+class WeaponBag{
+}
