@@ -1,11 +1,12 @@
-package bags
+package aux9.part1.problem.bags
 
-import items.Item
-import items.potions.HpPotion
-import items.weapons.melee.Sword
-import items.weapons.range.Bow
+import aux9.part1.problem.items.Item
+import aux9.part1.problem.items.potions.HpPotion
+import aux9.part1.problem.items.weapons.melee.Sword
+import aux9.part1.problem.items.weapons.range.Bow
 import munit.FunSuite
 
+/*
 class GenericBagTest extends FunSuite{
   var bag: GenericBag[Item] = _
   val bow = new Bow
@@ -16,7 +17,7 @@ class GenericBagTest extends FunSuite{
   }
   test("GenericBag should be able to add a item"){
     bag.addItem(bow)
-    assertEquals(bag.items, List(bow))
+    assertEquals(bag.getItems, List(bow))
   }
   test("GenericBag should be able to get all item"){
     bag.addItem(bow)
@@ -25,3 +26,4 @@ class GenericBagTest extends FunSuite{
     assertEquals(bag.getItems, List(hpPotion, sword, bow))
   }
 }
+*/

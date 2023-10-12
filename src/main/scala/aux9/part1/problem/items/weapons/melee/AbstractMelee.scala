@@ -1,4 +1,4 @@
-package items.weapons.melee
+package aux9.part1.problem.items.weapons.melee
 
 abstract class AbstractMelee extends MeleeWeapon{
   val name: String
