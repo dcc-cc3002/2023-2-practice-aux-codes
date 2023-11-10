@@ -23,7 +23,7 @@ class GameController {
 
   def selected(): GameUnit = {
     if (_selected.isDefined) {
-      _selected.get 
+      _selected.get
     } else {
       throw new AssertionError("Ally not defined")
     }
@@ -31,19 +31,15 @@ class GameController {
 
   def target(): GameUnit = {
     if (_target.isDefined) {
-      _target.get 
+      _target.get
     } else {
       throw new AssertionError("Enemy not defined")
     }
   }
 
-  def hasSpell(): Boolean = {
-    _spell.isDefined
-  }
-
   def spell(): Ability = {
     if (_spell.isDefined) {
-      _spell.get 
+      _spell.get
     } else {
       throw new AssertionError("Spell not defined")
     }
@@ -51,12 +47,6 @@ class GameController {
 
   def spell_=(sp: Ability): Unit = {
     _spell = Some(sp)
-  }
-
-
-  def changeState(st: GameState) = {
-    state = st
-    st.controller = this
   }
 
   def startGame() = {
@@ -69,71 +59,59 @@ class GameController {
     enemies += new Mahito()
 
     println("Bienvenido al combate!")
-  } 
+  }
 
   def endGame() = {
     if (win()) {
       println("Felicidades! Ganaste!")
     } else if (lose()) {
-      println("O no! Perdiste :c")
+      println("Oh no! Perdiste :c")
     } else {
       println("Juego terminado antes de tiempo")
     }
   }
 
-  def addObserver(obs: Observer) = {
-    this.observers += obs
-  }
-
   def getInput(): Int = {
     val in = StdIn.readLine()
     in.toInt
-  } 
-
-  def play() = {
   }
 
-  def finish(): Boolean = {
-  }
+  // DESDE AQUI USTED DEBE COMPLETAR
 
-  def win(): Boolean = {
+  def addObserver(obs: Observer) = {}
 
-  }
+  def changeState(st: GameState) = {}
 
-  def lose(): Boolean = {
+  def play() = {}
 
-  }
+  def finish(): Boolean = false
 
-  def alliesLength(): Int = {
-  }
+  def win(): Boolean = false
 
-  def enemiesLength(): Int = {
-  }
+  def lose(): Boolean = false
 
-  def selectAlly(id: Int) = {
-  }
+  def hasSpell(): Boolean = false
 
-  def selectAllyTarget(id: Int) = {
-  }
+  def alliesLength(): Int = 0
 
-  def selectEnemy(id: Int) = {
-  }
+  def enemiesLength(): Int = 0
 
-  def selectEnemyTarget(id: Int) = {
-  }
+  def selectAlly(id: Int) = {}
 
-  def doAttack() = {
+  def selectAllyTarget(id: Int) = {}
 
-  }
+  def selectEnemy(id: Int) = {}
 
-  def useSpell() = {
+  def selectEnemyTarget(id: Int) = {}
 
-  }
+  def doAttack() = {}
 
+  def useSpell() = {}
+  // HASTA AQUI USTED DEBE COMPLETAR
 
   def promptStart() = {
     println("Turno del jugador")
-  } 
+  }
 
   def promptError(opt: Int) = {
     println(s"Opción inválida $opt")
@@ -141,18 +119,17 @@ class GameController {
 
   def promptAllies() = {
     println("Escoge un aliado:")
-    for(i <- 0 to allies.length - 1) {
-      println(s"${i+1}) ${allies(i).name}")
+    for (i <- 0 to allies.length - 1) {
+      println(s"${i + 1}) ${allies(i).name}")
     }
   }
 
   def promptEnemies() = {
     println("Escoge un enemigo:")
-    for(i <- 0 to enemies.length - 1) {
-      println(s"${i+1}) ${enemies(i).name}")
+    for (i <- 0 to enemies.length - 1) {
+      println(s"${i + 1}) ${enemies(i).name}")
     }
   }
-
 
   def promptActions() = {
     println(s"Estado de ${selected.name}")
@@ -167,13 +144,17 @@ class GameController {
 
   def promptSpells(sp: ArrayBuffer[Ability]) = {
     println("Escoge una técnica maldita:")
-    for(i <- 0 to sp.length - 1) {
-      println(s"${i+1}) ${sp(i).name}")
+    for (i <- 0 to sp.length - 1) {
+      println(s"${i + 1}) ${sp(i).name}")
     }
   }
 
-  def promptNoEnergy() = {
-    println("No tienes suficiente energía maldita")
+  def promptNoEnergy(u: GameUnit) = {
+    println(s"${u.name} no tiene suficiente energía maldita para hacer eso")
+  }
+
+  def promptNoHealth(u: GameUnit) = {
+    println(s"${u.name} esta muerto, no puede atacar o ser atacado")
   }
 
   def notifyAttack(from: GameUnit, to: GameUnit) {

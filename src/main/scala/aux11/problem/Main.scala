@@ -1,4 +1,4 @@
-package aux11.solution
+package aux11.problem
 
 import controller.GameController
 import controller.observers.InfoObserver
