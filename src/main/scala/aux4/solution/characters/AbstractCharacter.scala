@@ -7,7 +7,7 @@ abstract class AbstractCharacter(val name: String,
     "For the glory!"
   }
 
-  override def regenerateHp(): Unit = {
+  def regenerateHp(): Unit = {
     healthPoints += 1
   }
 }
