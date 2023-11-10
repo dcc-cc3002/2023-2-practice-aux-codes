@@ -1,12 +1,12 @@
-package aux11.solution.controller
+package aux11.problem.controller
 
 import states.GameState
 import states.player.InitialState
 import observers.Observer
-import aux11.solution.model.units.GameUnit
-import aux11.solution.model.units.enemies._
-import aux11.solution.model.units.allies._
-import aux11.solution.model.abilities.Ability
+import aux11.problem.model.units.GameUnit
+import aux11.problem.model.units.enemies._
+import aux11.problem.model.units.allies._
+import aux11.problem.model.abilities.Ability
 import scala.collection.mutable.ArrayBuffer
 import scala.io.StdIn
 

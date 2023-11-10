@@ -1,6 +1,6 @@
-package aux11.solution.controller.states.player
+package aux11.problem.controller.states.player
 
-import aux11.solution.controller.states.AbstractGameState
+import aux11.problem.controller.states.AbstractGameState
 
 class InitialState extends AbstractGameState {
 

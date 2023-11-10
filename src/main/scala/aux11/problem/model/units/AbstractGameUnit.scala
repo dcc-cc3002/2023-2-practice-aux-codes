@@ -1,6 +1,6 @@
-package aux11.solution.model.units
+package aux11.problem.model.units
 
-import aux11.solution.model.abilities.Ability
+import aux11.problem.model.abilities.Ability
 
 import scala.collection.mutable.ArrayBuffer
 import scala.collection.immutable.List

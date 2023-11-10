@@ -1,6 +1,6 @@
-package aux11.solution.model.abilities
+package aux11.problem.model.abilities
 
-import aux11.solution.model.units.GameUnit
+import aux11.problem.model.units.GameUnit
 
 abstract class DamageAbility(
     val cost: Int,

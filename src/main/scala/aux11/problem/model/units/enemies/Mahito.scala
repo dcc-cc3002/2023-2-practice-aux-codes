@@ -1,7 +1,7 @@
-package aux11.solution.model.units.enemies
+package aux11.problem.model.units.enemies
 
-import aux11.solution.model.units.AbstractGameUnit
-import aux11.solution.model.abilities.enemies.Transfiguration
+import aux11.problem.model.units.AbstractGameUnit
+import aux11.problem.model.abilities.enemies.Transfiguration
 
 class Mahito extends AbstractGameUnit("Mahito", 10, 80, 120) {
   addSpell(new Transfiguration)

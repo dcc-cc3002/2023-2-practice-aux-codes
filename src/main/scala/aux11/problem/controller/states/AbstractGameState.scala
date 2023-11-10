@@ -1,7 +1,7 @@
-package aux11.solution.controller.states
+package aux11.problem.controller.states
 
-import aux11.solution.controller.GameController
-import aux11.solution.controller.observers.Observer
+import aux11.problem.controller.GameController
+import aux11.problem.controller.observers.Observer
 import scala.collection.mutable.ArrayBuffer
 
 abstract class AbstractGameState extends GameState {
